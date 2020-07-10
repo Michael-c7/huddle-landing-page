@@ -1,0 +1,43 @@
+/*Typpograhy*/
+
+/*Headings*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+/*Weights : 700 */
+
+/*Body*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/*font-family: 'Open Sans', sans-serif;*/
+/*Weights : 400, 600, 700*/
+
+:root {
+    /*colors*/
+
+    /*Primary color*/
+    --pink: hsl(322, 100%, 66%);
+
+    /*Netural*/
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-pale-blue: hsl(207, 100%, 98%);
+}
+
+/*base styles / resets*/
+
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+
+
+body {
+    box-sizing:inherit;
+    padding:0;
+    margin:0;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}

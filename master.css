@@ -10,6 +10,8 @@
 /*font-family: 'Open Sans', sans-serif;*/
 /*Weights : 400, 600, 700*/
 
+/*font-size:calc(3vw + 1rem);*/
+
 :root {
     /*colors*/
 
@@ -19,6 +21,9 @@
     /*Netural*/
     --very-dark-cyan: hsl(192, 100%, 9%);
     --very-pale-blue: hsl(207, 100%, 98%);
+
+    /*other*/
+    --background-shape-white:#F6FBFF;
 }
 
 /*base styles / resets*/
@@ -27,13 +32,11 @@
     box-sizing:border-box;
 }
 
-
-
 body {
     box-sizing:inherit;
     padding:0;
     margin:0;
-
+    line-height: 1.4;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -41,3 +44,452 @@ h1, h2, h3,
 h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
+
+h1 {  font-size:1.5rem; }
+   
+h2  { font-size:1.25rem; }
+    
+h3 { font-size:1.15rem; }
+    
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+
+img {
+    display:block;
+    max-width:100%;
+}
+
+
+/*navbar*/
+.navbar {
+    
+    width:95%;
+    height:5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /*margin value: top, right, bottom, left */
+    margin:0.5rem auto 7.5rem auto;
+}
+
+.navbar__logo {
+    width:100px;
+    height:auto;
+}
+
+/*
+.try-free-btn is grouped with the utilites within button styles
+(Note : NOT in the physical HTML document,
+ but in the organisation of the CSS)
+*/
+
+/*end of .navbar*/ 
+
+
+/*header*/
+
+.header {
+    text-align:center;
+}
+
+.header__h1 span {
+    display:block;
+}
+
+.header__text {
+    margin-bottom:3.5rem;
+}
+
+.get-started-btn {
+    margin-bottom:6.5rem;
+}
+
+/*end of .header */
+
+
+.main {
+    /*background-color:rgba(22, 18, 18, 0.10);*/
+}
+
+
+.main__hero-img {
+    width:95%;
+    /*margin value: top, right, bottom, left */
+    margin:0 auto 6.5rem auto;
+}
+
+
+.main__stat {
+    text-align:center;
+    /*background-color: rgba(202, 18, 18, 0.25);*/
+    margin-bottom:7rem;
+}
+
+.main__stat-1,
+.main__stat-2 {
+    position: relative;
+}
+
+/* people icon above header text*/
+.main__stat-1:before {
+    content:'';
+    position: absolute;
+    width:130px;
+    height:100%;
+    left:50%;
+    top:-30%;
+    transform:translateX(-50%);
+    background-image: url("huddle-landing-page-master/images/icon-communities.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 2rem;
+}
+
+/* message box icon above header text*/
+.main__stat-2:before {
+    content:'';
+    position: absolute;
+    width:150px;
+    height:100%;
+    left:50%;
+    top:-15%;
+    transform:translateX(-50%);
+    background-image: url("huddle-landing-page-master/images/icon-messages.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 1.5rem;
+}
+
+.main__stat-header {
+    font-size:3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0px;  
+}
+
+.main__stat-text {
+    margin-top:-2.75rem;
+    color:gray;
+    color:var(--very-dark-cyan);
+    font-size:0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/*end of .main */
+
+
+
+
+/*sale-points */
+.sale-points {
+    text-align:center;
+    line-height:1.6;
+}
+
+.sale-point-img {
+    width:80%;
+    margin:0 auto;
+    margin-bottom:2.5rem;
+}
+
+.sale-point-text {
+    width:90%;
+    margin:0 auto;
+}
+
+.sale-point {
+    /*background-color: rgba(22, 18, 18, 0.25);*/
+    margin-bottom: 10rem;
+}
+
+.sale-point-1,
+.sale-point-3 {
+    position: relative;
+    background-color:#F6FBFF; /*fallback color*/
+    background-color: var(--background-shape-white);
+    padding: 7rem 0;
+}
+
+.sale-point-2 {
+    padding: 3rem 0;
+}
+
+.sale-point-1::before,
+.sale-point-1::after,
+.sale-point-3::before,
+.sale-point-3::after {
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    background-repeat: no-repeat;
+    background-color:transparent;
+}
+
+/*shape at the top of sale-point-3*/
+.sale-point-1:before {
+    top:-16%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-image:url("huddle-landing-page-master/images/bg-section-top-mobile-1.svg");
+}
+
+
+/*shape at the bottom of sale-point-3*/
+.sale-point-1:after {
+    top:6%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-image:url("huddle-landing-page-master/images/bg-section-bottom-mobile-1.svg");  
+}
+
+/*shape at the top of sale-point-3*/
+.sale-point-3::before {
+    top:-16%;
+    background-position: 50% 0%;
+    background-image:url("huddle-landing-page-master/images/bg-section-top-mobile-2.svg");   
+}
+
+/*shape at the bottom of sale-point-3*/
+.sale-point-3::after {
+    bottom:-16%;
+    background-position: 50% 100%;
+    background-image:url("huddle-landing-page-master/images/bg-section-bottom-mobile-2.svg"); 
+}
+
+/* end of .sales-points */
+
+
+.call-to-action-2 {
+    /*background-color: rgba(22, 18, 18, 0.25);*/
+    position: relative;
+    text-align:center;
+    width:100%;
+    height:17vh;
+
+    margin-bottom:10rem;
+}
+
+.call-to-action-2__header {
+    margin-bottom:1.5rem;
+}
+
+.call-to-action-2__header span {
+    display:block;
+}
+
+/*end of .call-to-action-2*/
+
+
+/*footer */
+.footer {
+    position:relative;
+    background-color:black;
+    background-color:var(--very-dark-cyan);
+    color:white;
+    padding-top:5rem;
+    padding-bottom:2.5rem;
+}
+/*shape at top of footer*/
+.footer:before {
+    content:'';
+    position: absolute;
+    width:100%;
+    height:10%;
+    top:-9%;
+    left:0;
+    background-image:url("huddle-landing-page-master/images/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+
+}
+
+.footer__newsletter {
+    width:90%;
+    margin:0 auto;
+    margin-top:-2.5rem;
+    margin-bottom:7rem;
+    line-height: 1.8;
+    
+}
+.footer__newsletter__header {
+    font-weight:700;
+}
+
+.footer__newsletter-email {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.footer__newsletter-email-input {
+    width:100%;
+    font-size:2.25rem;
+    border-radius:7px;
+    border:none;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+/*
+.footer__newsletter-email-submit is grouped
+ with the utilites within button styles
+(Note : NOT in the physical HTML document,
+ but in the organisation of the CSS)
+*/
+
+
+.footer__info__contact {
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+.footer__info {
+    width:90%;
+    margin: 0 auto;
+    font-style: normal;
+}
+
+.footer__info-logo {
+    width:185px;
+    height:auto;
+}
+
+.footer__info-phone {
+    margin-bottom:1rem;
+}
+
+.footer__info-email {
+    margin-bottom:2rem;
+}
+
+.footer__info-phone,
+.footer__info-email {
+    display:flex;
+    align-items:center;
+    
+}
+
+.footer__info-phone__img,
+.footer__info-email__img {
+    width:auto;
+    height:18px;   
+}
+
+.footer__info-phone__link,
+.footer__info-email__link {
+    /*margin-left:10px;*/
+    font-style: normal;
+}
+.footer__info-phone__link {
+    margin-left:1.30rem;
+    
+}
+.footer__info-email__link {
+    margin-left:1.10rem;
+    letter-spacing: 0.55px;
+}
+
+.footer__info-social-links {
+    display:flex;
+    flex-direction: row;
+    
+}
+.footer__info-social-img {
+    width:25px;
+    height:25px;
+}
+
+.footer__info-social-link {
+    margin:0 0.4rem;
+}
+
+.footer__info-social-link:first-of-type {
+    margin-left:0;
+}
+
+.footer__info-social-link:last-of-type {
+    margin-right:0;
+}
+
+/*end of footer */
+
+
+/*utilites*/
+
+    /*button styles*/
+
+/*try it free button*/
+.try-free-btn {
+    background-color:transparent;
+    color:palevioletred; /*fallback color*/
+    color:var(--pink);
+
+    border:1px solid palevioletred; /*fallback color*/
+    border:1px solid var(--pink);
+    border-radius:50px;
+    box-shadow:0px 0px 5px rgba(22, 18, 18, 0.15);
+
+    font-size:0.7rem;
+    font-weight:400;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+
+    width:6rem;
+    height:1.75rem; 
+
+}
+
+.get-started-btn {
+    background-color:palevioletred; /*fallback color*/
+    background-color:var(--pink);
+
+    color:var(--very-pale-blue);
+
+    border:none;
+    border-radius:50px;
+
+    box-shadow:0px 5px 10px rgba(22, 18, 18, 0.25);
+
+    padding:0.75rem 2.25rem;
+
+    font-size:0.75rem;
+    font-weight:600;
+    letter-spacing: 0.5px;
+    
+}
+
+
+.footer__newsletter-email-submit {
+    background-color:palevioletred; /*fallback color*/
+    background-color:var(--pink);
+
+    color:var(--very-pale-blue);
+
+    border:none;
+    border-radius:7px;
+
+    box-shadow:0px 5px 10px rgba(22, 18, 18, 0.25);
+
+    padding:1rem 2.5rem;
+    font-size:0.85rem;
+    font-weight:600;
+    letter-spacing: 0.85px;
+
+    align-self:flex-end;
+}
+
+    /* end of button styles*/
+
+/* end of utilites*/
+
+
+
+

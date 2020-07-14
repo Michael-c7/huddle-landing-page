@@ -1,4 +1,4 @@
-/*Typpograhy*/
+/*Typograhy*/
 
 /*Headings*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
@@ -304,7 +304,6 @@ img {
     background-image:url("huddle-landing-page-master/images/bg-footer-top-mobile.svg");
     background-repeat: no-repeat;
     background-position: 50% 100%;
-
 }
 
 .footer__newsletter {
@@ -312,8 +311,7 @@ img {
     margin:0 auto;
     margin-top:-2.5rem;
     margin-bottom:7rem;
-    line-height: 1.8;
-    
+    line-height: 1.8;  
 }
 .footer__newsletter__header {
     font-weight:700;
@@ -321,8 +319,7 @@ img {
 
 .footer__newsletter-email {
     display:flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 
 .footer__newsletter-email-input {
@@ -345,8 +342,6 @@ img {
 .footer__info__contact {
     display:flex;
     flex-direction: column;
-    
-    
 }
 
 .footer__info {
@@ -442,7 +437,6 @@ img {
 
     width:6rem;
     height:1.75rem; 
-
 }
 
 .get-started-btn {
@@ -541,6 +535,8 @@ img {
     background-position: 50% 100%;
     background-clip: border-box;
     background-color:none;     
+
+    /*end of shape at top of footer*/
 }
     }
     
@@ -685,7 +681,6 @@ img {
     top:25%;
     background-position: 50% 100%;
     background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-1.svg");  
-
 }
 
 
@@ -694,7 +689,6 @@ img {
     top:-30%;
     background-position: 50% 0%;
     background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-2.svg");   
-
 }
 
 /*shape at the bottom of sale-point-3*/
@@ -748,8 +742,7 @@ img {
 
     width:4.25rem;
     height:1.4rem; 
-
-    }
+   }
 
 
     .get-started-btn {
@@ -870,7 +863,6 @@ img {
     width:auto;
     margin: 0;
     padding:0;
-
 }
 
 .footer__info-email {
@@ -879,6 +871,9 @@ img {
 
 /*end of footer */
 }
+
+
+
 
 /*Laptop large*/
 @media(min-width:1440px) {
@@ -928,7 +923,6 @@ img {
         background-color:none;     
     }    
 }
-
 
     
     /*end of media queries*/

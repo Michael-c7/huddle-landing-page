@@ -28,8 +28,12 @@
 
 /*base styles / resets*/
 
-*, *::before, *::after {
+html {
     box-sizing:border-box;
+}
+
+*, *::before, *::after {
+    box-sizing:inherit;
 }
 
 body {
@@ -111,11 +115,6 @@ img {
 /*end of .header */
 
 
-.main {
-    /*background-color:rgba(22, 18, 18, 0.10);*/
-}
-
-
 .main__hero-img {
     width:95%;
     /*margin value: top, right, bottom, left */
@@ -125,7 +124,6 @@ img {
 
 .main__stat {
     text-align:center;
-    /*background-color: rgba(202, 18, 18, 0.25);*/
     margin-bottom:7rem;
 }
 
@@ -202,7 +200,6 @@ img {
 }
 
 .sale-point {
-    /*background-color: rgba(22, 18, 18, 0.25);*/
     margin-bottom: 10rem;
 }
 
@@ -266,7 +263,6 @@ img {
 
 
 .call-to-action-2 {
-    /*background-color: rgba(22, 18, 18, 0.25);*/
     position: relative;
     text-align:center;
     width:100%;
@@ -294,6 +290,8 @@ img {
     color:white;
     padding-top:5rem;
     padding-bottom:2.5rem;
+
+    overflow:none;
 }
 /*shape at top of footer*/
 .footer:before {
@@ -463,7 +461,6 @@ img {
     font-size:0.75rem;
     font-weight:600;
     letter-spacing: 0.5px;
-    
 }
 
 
@@ -474,14 +471,14 @@ img {
     color:var(--very-pale-blue);
 
     border:none;
-    border-radius:7px;
+    border-radius:5px;
 
     box-shadow:0px 5px 10px rgba(22, 18, 18, 0.25);
 
-    padding:1rem 2.5rem;
+    padding:1rem 2.75rem;
     font-size:0.85rem;
     font-weight:600;
-    letter-spacing: 0.85px;
+    letter-spacing: 0.75px;
 
     align-self:flex-end;
 }
@@ -493,3 +490,445 @@ img {
 
 
 
+
+/* start of media queries */
+
+/*Phone Medium*/
+@media(min-width:376px) {
+
+    
+    /*shape at the top of sale-point-3*/
+    .sale-point-1:before {
+        top:-22%;
+        background-position: 50% 0%;
+        background-repeat: no-repeat;
+        background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-1.svg");
+    }
+    
+    
+    /*shape at the bottom of sale-point-3*/
+    .sale-point-1:after {
+        top:9%;
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-1.svg");  
+    }
+    
+    /*shape at the top of sale-point-3*/
+    .sale-point-3::before {
+        top:-13%;
+        background-position: 50% 0%;
+        background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-2.svg");   
+    }
+    
+    /*shape at the bottom of sale-point-3*/
+    .sale-point-3::after {
+        bottom:-10%;
+        background-position: 50% 100%;
+        background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-2.svg"); 
+    }
+    
+    /* end of .sales-points */
+
+
+    /*shape at top of footer*/
+.footer:before {
+    width:100%;
+    height:27%;
+    top:-26%;
+    left:0;
+    background-image:url("huddle-landing-page-master/images/bg-footer-top-desktop.svg");
+    background-position: 50% 100%;
+    background-clip: border-box;
+    background-color:none;     
+}
+    }
+    
+
+    
+
+
+/*Tablet*/
+@media(min-width:768px) {
+
+    .header__h1 {
+        font-size:calc(1.5rem + 0.8vw);
+    }
+
+    .header__h1 span {
+        display:inline;
+    }
+    
+    .header__text {
+        margin:0 auto;
+        width:52ch;
+        font-size:calc(1rem + 0.10vw);
+        line-height: 1.6;
+        margin-bottom:2rem;
+    }
+    
+    .get-started-btn {
+        margin-bottom:4rem;
+    }
+
+
+    .main__hero-img {
+        width:85%;
+        /*margin value: top, right, bottom, left */
+        margin:0 auto 6.5rem auto;
+    }
+
+    .main__stats {
+       display:flex;
+       justify-content: space-evenly;
+    }
+      
+    .main__stat {
+        margin-bottom:7rem;
+    }
+    
+    .main__stat-1,
+    .main__stat-2 {
+        position: relative;
+    }
+    
+    /* people icon above header text*/
+    .main__stat-1:before,
+    /* message box icon above header text*/
+    .main__stat-2:before  {
+        top:15%;
+    }
+
+    .main__stat-header {
+        font-size:3rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0px;  
+    }
+    
+    .main__stat-text {
+        margin-top:-2.5rem;
+        color:gray;
+    }
+    
+    /*end of .main */
+
+
+
+    
+/*sale-points */
+.sale-points {
+    text-align:center;
+    line-height:1.6;
+}
+
+.sale-point-img {
+    width:50vw;
+    margin:0 auto;
+    margin-bottom:0rem;
+    padding-right:5rem;
+    padding-left:2.5rem;
+}
+
+.sale-points__words {
+    padding-left:5rem;
+    padding-right:2.5rem;
+}
+
+.sale-point-header {
+    text-align:left;
+    width:100%;
+    margin:0 auto;
+    margin-bottom:0.6rem;
+    font-size:calc(1.25rem + 0.25vh);
+}
+
+.sale-point-text {
+    width:100%;
+    margin:0 auto;
+    text-align:left;
+    font-size:0.85rem;
+    font-size:calc(0.85rem + 0.25vh);
+
+}
+
+.sale-point {
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    align-items:center;
+    margin-bottom: 10rem;
+}
+
+.sale-point-1,
+.sale-point-3 {
+    position: relative;
+    background-color:#F6FBFF; /*fallback color*/
+    background-color: var(--background-shape-white);
+    padding: 7rem 0;
+}
+
+.sale-point-2 {
+    padding: 3rem 0;
+}
+
+
+/*shape at the top of sale-point-3*/
+.sale-point-1:before {
+    top:-27%;
+    background-position: 50% 0%;
+    background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-1.svg");
+}
+
+/*shape at the bottom of sale-point-3*/
+.sale-point-1:after {
+    top:25%;
+    background-position: 50% 100%;
+    background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-1.svg");  
+
+}
+
+
+/*shape at the top of sale-point-3*/
+.sale-point-3::before {
+    top:-30%;
+    background-position: 50% 0%;
+    background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-2.svg");   
+
+}
+
+/*shape at the bottom of sale-point-3*/
+.sale-point-3::after {
+    bottom:-25%;
+    background-position: 50% 100%;
+    background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-2.svg"); 
+}
+
+/* end of .sales-points */
+
+.call-to-action-2 {
+    position: relative;
+    text-align:center;
+    width:100%;
+    height:17vh;
+    margin-top:13rem;
+    margin-bottom:13rem;
+}
+
+.call-to-action-2__header {
+    margin-bottom:1.5rem;
+    font-size:calc(1.15rem + 0.25vh);
+}
+
+.call-to-action-2__header span {
+    display:inline;
+}
+
+/*end of .call-to-action-2*/
+    
+    /*utilites*/
+
+        /*button styles*/
+
+/*try it free button*/
+.try-free-btn {
+    background-color:transparent;
+    color:palevioletred; /*fallback color*/
+    color:var(--pink);
+
+    border:1px solid palevioletred; /*fallback color*/
+    border:1px solid var(--pink);
+    border-radius:50px;
+    box-shadow:0px 0px 5px rgba(22, 18, 18, 0.15);
+
+    font-size:0.6rem;
+    font-weight:400;
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+
+    width:4.25rem;
+    height:1.4rem; 
+
+    }
+
+
+    .get-started-btn {
+        background-color:palevioletred; /*fallback color*/
+        background-color:var(--pink);
+    
+        color:var(--very-pale-blue);
+    
+        border:none;
+        border-radius:50px;
+    
+        box-shadow:0px 5px 10px rgba(22, 18, 18, 0.25);
+    
+        padding:1.25rem 4.5rem;
+    
+        font-size:0.8rem;
+        font-weight:600;
+        letter-spacing: 0.5px;
+    }
+
+
+    .get-started-btn:hover,
+    .get-started-btn:focus {
+        cursor:pointer;
+        filter: grayscale(25%);
+        box-shadow:0px 5px 10px rgba(22, 18, 18, 0.5);
+    }
+
+        /*button styles*/
+
+    /*utilites*/
+
+}
+
+
+
+
+
+/*Laptop*/
+@media(min-width:1024px) {
+    /*footer */
+.footer {
+    position:relative;
+    background-color:black;
+    background-color:var(--very-dark-cyan);
+    color:white;
+    padding-top:5rem;
+    padding-bottom:2.5rem;
+
+    overflow:none;
+}
+/*shape at top of footer*/
+
+
+.footer {
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-around;   
+    padding-bottom:4rem;
+}
+
+/*shape at top of footer*/
+.footer:before {
+    width:100%;
+    height:45%;
+    top:-45%;
+    left:0;
+    background-image:url("huddle-landing-page-master/images/bg-footer-top-desktop.svg");
+    background-position: 50% 100%;
+    background-clip: border-box;
+    background-color:none;     
+}    
+
+.footer__newsletter {
+    width:auto;
+    margin:0;
+    padding:0;
+    line-height: 1.8;
+}
+
+.footer__newsletter__header {
+    font-weight:700;
+    font-size:1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.footer__newsletter-email {
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.footer__newsletter-email-input {
+    width:50%;
+    margin-top:0rem;
+    margin-bottom:0rem;
+    margin-right:2rem;
+}
+
+/*
+.footer__newsletter-email-submit is grouped
+ with the utilites within button styles
+(Note : NOT in the physical HTML document,
+ but in the organisation of the CSS)
+*/
+.footer__info-text,
+.footer__newsletter__text {
+    font-size:0.95rem;
+    width:41ch;
+}
+
+.footer__info__contact {
+    display:flex;
+    flex-direction: column;   
+}
+
+.footer__info {
+    width:auto;
+    margin: 0;
+    padding:0;
+
+}
+
+.footer__info-email {
+    margin-bottom:2.5rem;
+}
+
+/*end of footer */
+}
+
+/*Laptop large*/
+@media(min-width:1440px) {
+    /*shape at the top of sale-point-3*/
+    .sale-point-1:before {
+        top:-19%;
+        background-position: 50% 0%;
+        background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-1.svg");
+    }
+
+    /*shape at the bottom of sale-point-3*/
+    .sale-point-1:after {
+        top:19%;
+        background-position: 50% 100%;
+        background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-1.svg");  
+
+    }
+
+
+    /*shape at the top of sale-point-3*/
+    .sale-point-3::before {
+        top:-19%;
+        background-position: 50% 0%;
+        background-image:url("huddle-landing-page-master/images/bg-section-top-desktop-2.svg");   
+
+    }
+
+    /*shape at the bottom of sale-point-3*/
+    .sale-point-3::after {
+        bottom:-19%;
+        background-position: 50% 100%;
+        background-image:url("huddle-landing-page-master/images/bg-section-bottom-desktop-2.svg"); 
+    }
+
+/* end of .sales-points */
+
+
+    /*shape at top of footer*/
+    .footer:before {
+        width:100%;
+        height:45%;
+        top:-45%;
+        left:0;
+        background-image:url("huddle-landing-page-master/images/bg-footer-top-desktop.svg");
+        background-position: 50% 100%;
+        background-clip: border-box;
+        background-color:none;     
+    }    
+}
+
+
+    
+    /*end of media queries*/
